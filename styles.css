@@ -25,21 +25,22 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+    background-color: #2E9DF7;
+    font-family: 'Proxima Nova', Arial, sans-serif; /* updated font family */
 }
 
 .game-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 10px; /* Reduced gap from 20px to 10px */
 }
 
 .score-panel {
     display: flex;
-    justify-content: space-between;  /* Space between score and button */
+    justify-content: space-between; /* Space between score/lives and button */
     align-items: center;
+    gap: 20px;
     width: 800px;
     padding: 10px;
     background-color: #fff;
@@ -50,15 +51,15 @@ body {
 #game-container {
     width: 800px;
     height: 600px;
-    background-color: #e6f7ff;
+    background-color: #77A8BB; /* updated background color */
     border: 2px solid #333;
     border-radius: 8px;
     position: relative;
     overflow: hidden;
 }
 
-
 #start-btn {
+    margin-left: auto; /* Push the button to the right */
     padding: 8px 16px;
     background-color: #4CAF50;
     color: white;
@@ -72,50 +73,62 @@ body {
     background-color: #45a049;
 }
 
-.score {
-    flex: 0 1 auto;  /* Don't grow, can shrink, auto basis */
-    font-size: 24px;
-    font-weight: bold;
+.score, .lives {
+    font-size: 24px; /* Match size */
+    font-weight: bold; /* Match font weight */
+    color: #333; /* Ensure consistent color */
 }
 
 .water-drop {
     position: absolute;
-    width: 40px;  /* increased from 30px */
-    height: 40px; /* increased from 30px */
-    background-color: #0099ff;
+    width: 55px;  /* increased from 30px */
+    height: 80px; /* increased from 30px */
+    background-image: url('img/good-drop.png'); /* added image for good drop */
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 50% 50% 50% 50%;
-    animation: dropFall linear forwards;
     transform-origin: center;
     cursor: pointer;
     pointer-events: auto;
+    top: 0; /* Set initial position for manual animation */
 }
 
 .bad-drop {
-    background-color: #ff4444;
+    background-image: url('img/bad-drop.png'); /* added image for bad drop */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#water-can {
+    position: absolute;
+    bottom: 10px; /* position near the bottom */
+    left: 50%; /* center horizontally */
+    transform: translateX(-50%);
+    width: 60px; /* size of the water can */
+    height: auto;
+    cursor: pointer;
 }
 
 .game-title {
-    color: #131313;
-    font-size: 48px;
+    color: #FFC907; /* Changed to yellow */
+    font-size: 40px;
     margin-top: 0;
-    margin-bottom: 5px;  /* reduced from 20px */
+    margin-bottom: 2px;  /* reduced from 20px */
     text-align: center;
 }
 
 .game-tagline {
-    color: #666;
+    color: #fff; /* Changed to white */
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 2px;
     text-align: center;
 }
 
-@keyframes dropFall {
-    from {
-        transform: translateY(-20px);
-    }
-    to {
-        transform: translateY(600px);
-    }
+.game-logo {
+    display: block;
+    margin: 5px auto 0; /* Reduced bottom margin to remove extra space */
+    max-width: 150px; /* adjust size */
+    height: auto;
 }
 
 @media (max-width: 850px) {

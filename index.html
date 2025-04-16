@@ -8,15 +8,21 @@
 </head>
 <body>
     <div class="game-wrapper">
+        <img src="img/cw_logo.jpg" alt="Charity: Water Logo" class="game-logo">
+        <!-- Ensure the following images are available in the img folder -->
+        <!-- img/good-drop.png -->
+        <!-- img/bad-drop.png -->
         <h1 class="game-title">Water Drop</h1>
         <p class="game-tagline">Catch the good drops, avoid the bad ones!</p>
         <div class="score-panel">
             <div class="score">Score: <span id="score">0</span></div>
+            <div class="lives">Lives: <span id="lives">3</span></div>
             <button id="start-btn">Start Game</button>
         </div>
         
         <div id="game-container">
             <div id="message-display"></div>
+            <img src="img/watercan.png" alt="Water Can" id="water-can">
         </div>
     </div>
     
