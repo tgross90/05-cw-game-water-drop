@@ -24,6 +24,19 @@
             <div id="message-display"></div>
             <img src="img/watercan.png" alt="Water Can" id="water-can">
         </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" style="display:none; text-align:center; margin-top: 20px;">
+            <h2>Game Over!</h2>
+            <p>Your score: <span id="final-score"></span></p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div style="margin-top: 10px; text-align: center;">
+            <label for="level-bar">Progress toward Clean Water Goal:</label><br>
+            <progress id="level-bar" max="5" value="0" style="width: 50%;"></progress>
+        </div>
+
     </div>
     
     <script src="script.js"></script>

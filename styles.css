@@ -131,6 +131,76 @@ body {
     height: auto;
 }
 
+/* GAME OVER SCREEN */
+#game-over-screen {
+    position: absolute; /* Position relative to #game-container */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+    background-color: white;
+    border: 2px solid #ddd;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: none;
+}
+
+#game-over-screen h2 {
+    color: #f4a261;
+    margin-bottom: 10px;
+}
+
+#game-over-screen button {
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#game-over-screen button:hover {
+    background-color: #21867a;
+}
+
+/* PROGRESS BAR */
+#level-bar {
+    appearance: none;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+}
+
+#level-bar::-webkit-progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+}
+
+#level-bar::-webkit-progress-value {
+    background-color: #0071c5; /* Intel/charity:water blue */
+    border-radius: 10px;
+}
+
+#level-bar::-moz-progress-bar {
+    background-color: #0071c5;
+    border-radius: 10px;
+}
+
+/* BAD DROP VISUAL FEEDBACK: SHAKING JERRY CAN */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.3s;
+}
+
 @media (max-width: 850px) {
     .game-wrapper, .score-panel, #game-container {
         width: 95vw;
