@@ -210,3 +210,17 @@ body {
         height: 70vh;
     }
 }
+
+.mission-link {
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 16px;
+    color: #FFC907; /* Charity:Water yellow */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mission-link:hover {
+    text-decoration: underline;
+}
