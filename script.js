@@ -15,6 +15,9 @@ const finalScoreElement = document.getElementById('final-score');
 const gameOverScreen = document.getElementById('game-over-screen');
 const levelBar = document.getElementById('level-bar');
 
+const goodSound = document.getElementById('good-sound');
+const badSound = document.getElementById('bad-sound');
+
 let waterCanPosition = gameContainer.offsetWidth / 2 - 30;
 
 let moveDirection = null;
@@ -42,7 +45,7 @@ document.addEventListener('keyup', (event) => {
 
 function moveWaterCan() {
     if (!moveDirection) return;
-    const step = 10; // Increased step size from 5 to 10
+    const step = 5;
     if (moveDirection === 'left') {
         waterCanPosition = Math.max(0, waterCanPosition - step);
     } else if (moveDirection === 'right') {
